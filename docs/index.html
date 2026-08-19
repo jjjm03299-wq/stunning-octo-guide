@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>API Documentation</title>
+
+  <link
+    rel="stylesheet"
+    href="https://unpkg.com/swagger-ui-dist/swagger-ui.css"
+  >
+</head>
+
+<body>
+  <div id="swagger-ui"></div>
+
+  <script src="https://unpkg.com/swagger-ui-dist/swagger-ui-bundle.js"></script>
+
+  <script>
+    window.onload = function () {
+      SwaggerUIBundle({
+        spec: {
+          openapi: "3.0.3",
+          info: {
+            title: "PIN Generator API",
+            version: "1.0.0"
+          },
+          paths: {
+            "/api/get-ram.json": {
+              get: {
+                summary: "Get RAM",
+                responses: {
+                  "200": {
+                    description: "RAM information"
+                  }
+                }
+              }
+            },
+            "/api/list-package.json": {
+              get: {
+                summary: "List packages",
+                responses: {
+                  "200": {
+                    description: "Package list"
+                  }
+                }
+              }
+            }
+          }
+        },
+        dom_id: "#swagger-ui",
+        deepLinking: true,
+        layout: "BaseLayout"
+      });
+    };
+  </script>
+</body>
+</html>
