@@ -1,0 +1,14 @@
+{
+  "packages": {
+    "name": [
+      "openvpn",
+      "python",
+      "nodejs",
+      "kona",
+      "git",
+      "mono",
+      "q-dns-client",
+      "php"
+    ]
+  }
+}
